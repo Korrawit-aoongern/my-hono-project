@@ -25,3 +25,30 @@ Content-Type: application/json
     "firstname": "New",
     "lastname": "User"
 }
+
+
+
+### Roles API
+GET http://localhost:3000/api/roles
+
+###
+GET http://localhost:3000/api/roles/1
+
+###
+POST http://localhost:3000/api/roles
+Content-Type: application/json
+
+{
+    "name": "User"
+}
+
+###
+PUT http://localhost:3000/api/roles/3
+Content-Type: application/json
+
+{
+    "name": "Guest"
+}
+
+###
+DELETE http://localhost:3000/api/roles/3
