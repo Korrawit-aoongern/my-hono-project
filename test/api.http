@@ -8,3 +8,20 @@ Content-Type: application/json
     "cost": "160.00",
     "note": "แชมพูสมุนไพรสำหรับผมมัน"
 }
+
+###
+GET http://localhost:3000/api/users
+
+###
+GET http://localhost:3000/api/users/2
+
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "username": "newuser",
+    "password": "newpassword",
+    "firstname": "New",
+    "lastname": "User"
+}

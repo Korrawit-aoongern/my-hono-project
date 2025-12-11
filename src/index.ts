@@ -1,11 +1,19 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import productroutes from './product/index.js'
+import userroutes from './user/index.js'
 import db from './db/index.js'
 
 const app = new Hono()
 
+app.get('/', (c) => {
+  return c.json({ message: 'Welcome to the Hono server!' })
+});
+
 app.route('/api/products', productroutes);
+
+app.route('api/users', userroutes);
+
 
 serve({
   fetch: app.fetch,
