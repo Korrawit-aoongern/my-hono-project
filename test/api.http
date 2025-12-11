@@ -1,0 +1,10 @@
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "id": 10000,
+    "name": "แช",
+    "price": 169.50,
+    "cost": "160.00",
+    "note": "แชมพูสมุนไพรสำหรับผมมัน"
+}
