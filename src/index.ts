@@ -4,6 +4,7 @@ import productroutes from './product/index.js'
 import userroutes from './user/index.js'
 import db from './db/index.js'
 import rolesroutes from './Roles/index.js'
+import vehicleRoutes from './vehicle/index.js'
 
 const app = new Hono()
 
@@ -12,9 +13,9 @@ app.get('/', (c) => {
 });
 
 app.route('/api/products', productroutes);
-app.route('api/roles', rolesroutes);
-app.route('api/users', userroutes);
-
+app.route('/api/roles', rolesroutes);
+app.route('/api/users', userroutes);
+app.route('/api/vehicles', vehicleRoutes);
 
 serve({
   fetch: app.fetch,

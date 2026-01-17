@@ -52,3 +52,35 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/api/roles/3
+
+
+
+### Vehicle API
+GET http://localhost:3000/api/vehicles/getAll
+
+###
+GET http://localhost:3000/api/vehicles/get/1
+###
+POST http://localhost:3000/api/vehicles/create
+Content-Type: application/json
+
+{
+    "plateNumber": "ABC123",
+    "model": "Toyota",
+    "year": "2020",
+    "color": "Red"
+}
+
+###
+PUT http://localhost:3000/api/vehicles/edit/4
+Content-Type: application/json
+
+{
+    "plateNumber": "GGS142",
+    "model": "Toyota",
+    "year": "2022",
+    "color": "Blue"
+}
+
+###
+DELETE http://localhost:3000/api/vehicles/delete/4

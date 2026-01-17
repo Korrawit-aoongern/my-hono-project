@@ -9,7 +9,6 @@ type Role = {
     id : number,
     name : string
 }
-
 const CreateRolesSchema = z.object({
     name : z.string().nonempty("Please input role name"),
 })
